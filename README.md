@@ -21,7 +21,15 @@
 </ul>
 
 <h3>Code</h3>
-<p>This directory contains two sub-directories: one for processing data and constructing features, and one for running machine learning experiments and the ablation analysis in the paper</p>
+<p>This directory contains two sub-directories: one for processing data and constructing features, and one for running machine learning experiments and the ablation analysis in the paper. To run any of this code (or code modified from this directory) you need to have a few extremely useful scientific python packages installed including:
+<ul>
+<li><a href="http://www.numpy.org/">NumPy</a></li>
+<li><a href="http://scikit-learn.org/stable/">Scikit-Learn</a></li>
+<li><a href="http://pandas.pydata.org/">Pandas</a></li>
+<li><a href="http://matplotlib.org/">Matplotlib</a></li>
+</ul>
+Since many of these can be quite tricky to install (or get talking to one another) I also recommend the <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> scientific Python bundle. This should install all these modules (and more!) with much less frustration than doing each individually on your own.
+</p>
 <b>Data Processing</b>
 <ul>
 <li><code>ablation_data_prep.py</code>: script for combining previoiusly computed features, cleaning up the constructed dataset, and constructing train-test pairs for running machine learning ablation analysis.</li>

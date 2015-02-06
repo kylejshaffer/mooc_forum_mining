@@ -41,6 +41,7 @@ Since many of these can be quite tricky to install (or get talking to one anothe
 <ul>
 <li><code>ablation_analysis.py</code>: code used to run machine learning experiments using Logistic Regression and evaluating models with <b>Average Precision</b> over 10-fold cross validation, as well as a feature ablation analysis. This code generated the results section of the paper.</li>
 <li><code>example_classifier.py</code>: example script used early on to explore classifiers. Modified from an <a href="http://scikit-learn.org/stable/auto_examples/document_classification_20newsgroups.html">original post</a> in the docs for Scikit-Learn.</li>
-<li></li>
-<li></li>
+<li><code>label_assignment.py</code>: script for assigning labels collected from MTurk workers to instances within the dataset. </li>
+<li><code>ml_experiments.py</code>: early take on simple supervised machine learning experiments with constructed dataset in preparation for ablation analysis. Results from these experiments were not reported in the paper.</li>
+<li><code>results.txt</code>: raw results from ablation analysis.</li>
 </ul>

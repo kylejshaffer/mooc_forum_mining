@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Related Work}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Speech Act Detection}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{MOOC Student Behavior Analysis}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Description of Dataset}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Speech Act Definitions}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{MOOC Dataset}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Method}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Crowdsourced Data Collection}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Evaluating Annotation Quality}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Description of Features}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.4}{Predicting Speech Acts}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Results and Discussion}{}% 13
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 14

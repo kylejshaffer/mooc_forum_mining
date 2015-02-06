@@ -1,0 +1,101 @@
+\begin{thebibliography}{10}
+
+\bibitem{cohen2004learning}
+William~W Cohen, Vitor~R Carvalho, and Tom~M Mitchell.
+\newblock Learning to classify email into``speech acts''.
+\newblock In {\em EMNLP}, pages 309--316, 2004.
+
+\bibitem{carvalho2005collective}
+Vitor~R Carvalho and William~W Cohen.
+\newblock On the collective classification of email speech acts.
+\newblock In {\em Proceedings of the 28th annual international ACM SIGIR
+  conference on Research and development in information retrieval}, pages
+  345--352. ACM, 2005.
+
+\bibitem{qadir2011classifying}
+Ashequl Qadir and Ellen Riloff.
+\newblock Classifying sentences as speech acts in message board posts.
+\newblock In {\em Proceedings of the Conference on Empirical Methods in Natural
+  Language Processing}, pages 748--758. Association for Computational
+  Linguistics, 2011.
+
+\bibitem{ravi2007profiling}
+Sujith Ravi and Jihie Kim.
+\newblock Profiling student interactions in threaded discussions with speech
+  act classifiers.
+\newblock {\em Frontiers in Artificial Intelligence and Applications}, 158:357,
+  2007.
+
+\bibitem{kim2014towards}
+Jihie Kim and Jeon-Hyung Kang.
+\newblock Towards identifying unresolved discussions in student online forums.
+\newblock {\em Applied Intelligence}, 40(4):601--612, 2014.
+
+\bibitem{chaturvedipredicting}
+Snigdha Chaturvedi, Dan Goldwasser, and Hal Daum{\'e}~III.
+\newblock Predicting instructor's intervention in mooc forums.
+\newblock In {\em 52nd Annual Meeting of the Association for Computational
+  Linguistics}, pages 1501--11, 2014.
+
+\bibitem{ramesh2014uncovering}
+Arti Ramesh, Dan Goldwasser, Bert Huang, Hal Daume~III, and Lise Getoor.
+\newblock Uncovering hidden engagement patterns for predicting learner
+  performance in moocs.
+\newblock In {\em Proceedings of the first ACM conference on Learning@ scale
+  conference}, pages 157--158. ACM, 2014.
+
+\bibitem{wen2014sentiment}
+Miaomiao Wen, Diyi Yang, and Carolyn~Penstein Ros{\'e}.
+\newblock Sentiment analysis in mooc discussion forums: What does it tell us?
+\newblock In {\em Proceedings of 2014 Conference on Educational Data Mining},
+  2014.
+
+\bibitem{elouazizi2014point}
+Noureddine Elouazizi.
+\newblock Point-of-view mining and cognitive presence in moocs: A
+  (computational) linguistics perspective.
+\newblock {\em EMNLP 2014}, page~32, 2014.
+
+\bibitem{wen2014linguistic}
+Miaomiao Wen, Diyi Yang, and Carolyn~Penstein Ros{\'e}.
+\newblock Linguistic reflections of student engagement in massive open online
+  courses.
+\newblock In {\em Proceedings of the International Conference on Weblogs and
+  Social Media}, 2014.
+
+\bibitem{searle1976taxonomy}
+John~R Searle.
+\newblock {\em A taxonomy of illocutionary acts}.
+\newblock Linguistic Agency University of Trier, 1976.
+
+\bibitem{koller2013retention}
+Daphne Koller, Andrew Ng, Chuong Do, and Zhenghao Chen.
+\newblock Retention and intention in massive open online courses: In depth.
+\newblock {\em Educause Review}, 48(3), 2013.
+
+\bibitem{sheng2008get}
+Victor~S Sheng, Foster Provost, and Panagiotis~G Ipeirotis.
+\newblock Get another label? improving data quality and data mining using
+  multiple, noisy labelers.
+\newblock In {\em Proceedings of the 14th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 614--622. ACM, 2008.
+
+\bibitem{tausczik2010psychological}
+Yla~R Tausczik and James~W Pennebaker.
+\newblock The psychological meaning of words: Liwc and computerized text
+  analysis methods.
+\newblock {\em Journal of language and social psychology}, 29(1):24--54, 2010.
+
+\bibitem{liu2005opinion}
+Bing Liu, Minqing Hu, and Junsheng Cheng.
+\newblock Opinion observer: analyzing and comparing opinions on the web.
+\newblock In {\em Proceedings of the 14th international conference on World
+  Wide Web}, pages 342--351. ACM, 2005.
+
+\bibitem{bhatia2012classifying}
+Sumit Bhatia, Prakhar Biyani, and Prasenjit Mitra.
+\newblock Classifying user messages for managing web forum data.
+\newblock In {\em 15th International workshop on the Web and Databases (WebDB),
+  Co-Located with SIGMOD, 2012}. Citeseer, 2012.
+
+\end{thebibliography}

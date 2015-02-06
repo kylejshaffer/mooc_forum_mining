@@ -1,3 +1,8 @@
+'''
+This script extracts only the text from dataset, extracts punctuation, down-cases
+the text, and formats data into text file for use with LIWC word-count analysis software.
+'''
+
 import string
 import pandas as pd
 import json, os, string, unicodedata

@@ -1,32 +1,12 @@
-#####################################################################
-################### EXPERIMENT NOTES SECTION ########################
-#####################################################################
-
-# PARAMETER TUNING MOCK CODE #
-# TRY THIS LATER #
-''' RandomizedSearchCV for SVM
-from scipy.stats import uniform as sp_uniform
-clf = SVC()
-param_dist = {'C': sp_uniform(1,4), 'kernel': ['linear', 'rbf']}
-
-random_search = RandomizedSearchCV(clf, param_distributions=param_dist, cv=3, n_jobs=9)
-random_search.fit(X_train, y_train)
-
-random_search.best_score_
-random_search.best_params_
-
-Grid SearchCV for Logistic Regression
-param_grid = {'C': [0.001, 0.01, 0.1, 1, 10, 100, 1000]}
-# Double-check default settings for LR
-clf = LogisticRegression(penalty='l2')
-grid_search = GridSearchCV(clf, param_grid)
+'''
+Initial script for running machine learning experiments using K-fold
+cross validation. Results from these experiments are not reported 
+in the paper. 
 '''
 
 import os, json, math
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-plt.style.use('ggplot')
 from random import shuffle
 from sklearn import preprocessing, metrics
 from sklearn.feature_extraction import DictVectorizer

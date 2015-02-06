@@ -1,6 +1,10 @@
 """
 Created on Sat Jan 10 17:59:58 2015
 
+This script reads in separate datasets that represent different subsets of features 
+used for machine learning experiments, combines them, and constructs train-test
+pairs for later use in machine learning code.
+
 @author: kylefth
 """
 
@@ -178,7 +182,7 @@ os.chdir(train_test_pairs + '/question')
 fold_partition(unigram_question)
 
 
-# Still need to generate train-test pairs from data
+# This section constructs train-test pairs for reach speech act category independently
 label_list = ['question', 'answer', 'issue', 'issue_resolution', 'positive_ack', 'negative_ack', 'other']
 for lab in label_list:
     os.chdir(train_test_pairs + '/' + lab)

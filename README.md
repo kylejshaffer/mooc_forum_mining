@@ -9,9 +9,16 @@
 <h3>Paper Files</h3>
 <b>Relevant files:</b>
 <ul>
-<li>`shaffer_mooc_study.pdf`</li>
-<li>`shaffer_mooc_study.tex`</li>
+<li><code>shaffer_mooc_study.pdf</code></li>
+<li><code>shaffer_mooc_study.tex</code></li>
 </ul>
 <h3>Interface</h3>
+<p>This directory contains HTML, JavaScript and CSS used for building the data collection interface used in this study. Relevant files are detailed below.</p>
+<ul>
+<li><code>index.html</code>: Main HTML interface MTurk workers used to annotate our dataset.</li>
+<li><code>instructions.html</code>: HTML file with instructions given to MTurk workers on how to annotate the dataset and the definitions that would be used for the class labels we needed to collect.</li>
+<li><code>thread.html</code>: HTML file presenting MTurk workers with individual thread and outlined post to be annotated.</li>
+</ul>
 
 <h3>Code</h3>
+<p>This directory contains two sub-directories: one for processing data and constructing features, and one for running machine learning experiments and the ablation analysis in the paper</p>

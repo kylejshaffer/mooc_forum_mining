@@ -9,8 +9,8 @@
 <h3>Paper Files</h3>
 <b>Relevant files:</b>
 <ul>
-<li><code>shaffer_mooc_study.pdf</code></li>
-<li><code>shaffer_mooc_study.tex</code></li>
+<li><code>shaffer_mooc_study.pdf</code>: final paper reporting on project and analyses run.</li>
+<li><code>shaffer_mooc_study.tex</code>: LaTeX code for generating final report.</li>
 </ul>
 <h3>Interface</h3>
 <p>This directory contains HTML, JavaScript and CSS used for building the data collection interface used in this study. Relevant files are detailed below.</p>

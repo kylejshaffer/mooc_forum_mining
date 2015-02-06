@@ -5,25 +5,10 @@ Created on Fri Jan  2 16:20:20 2015
 @author: kylefth
 
 Python script for running logistic regression classification on MOOC dataset
-and performing ablation analysis on features used for classification
+and performing ablation analysis on features used for classification. Results
+from these experiments are reported on for in the results section of the paper.
+
 """
-
-# PARAMETER TUNING CODE #
-# MAY WANT TO TRY DIFFERENT PARAMETER SPACES #
-''' 
-# Using Jaime's parameters for tuning
-Grid SearchCV for Logistic Regression 1
-param_grid = {'C': [2**-5, 2**-4, 2**-3, 2**-2, 2**-1, 1]}
-# Double-check default settings for LR
-clf = LogisticRegression(penalty='l2')
-grid_search = GridSearchCV(clf, param_grid)
-
-# Grid SearchCV for Logistic Regression 2
-c_range = np.logspace(0, 4, 10)
-param_grid = dict(C=c_range)
-clf = LogisticRegression(penalty='l2')
-grid_search = GridSearchCV(estimator=clf, param_grid=param_grid, num_jobs=1)
-'''
 
 import os, json, math
 import numpy as np
@@ -85,6 +70,8 @@ def run_ablation(features, data):
 # Function to run cross validation
 def run_cross_val(label, features):
     pairs = train_test(label)
+    # List for holding AP scores for each fold of 10-fold cross validation
+    # in order to report mean average precision across all folds.
     avg_prec_scores = []
     for p in pairs:
         current_data = p
@@ -97,16 +84,18 @@ def run_cross_val(label, features):
         run_ablation(features, X) # print len(X[0].keys())
         run_ablation(features, y) # print len(y[0].keys())
         
+        # Extracting labels and formatting data type
         train_labs = [int(i['LABEL']) for i in current_data[0]]
         test_labs = [int(i['LABEL']) for i in current_data[1]]
         
-        # Evening out training data for 50/50 split
+        # Data labels are badly skewed, so some form of training set balancing
+        # is needed. This portion of the script evens out labels within each training
+        # set to as close to a 50/50 split as possible for each fold of cross validation
         pos_class = [i for i in X if i['LABEL'] == 1]
         neg_class = [i for i in X if i['LABEL'] == 0]
         
         # Deal with ratios as floats at first then take floor or ceiling division
         # Run this and look at ratio calculations and make sure these are right
-        ''' New code here should account for class lists with length of zero'''
         if (len(neg_class) > len(pos_class)) and len(pos_class) > 0:
             ratio = int(math.ceil(float(len(neg_class)) / float(len(pos_class))))
             # print "Original class ratio is %s: 1, negative_class: positive_class" % ratio
@@ -115,12 +104,11 @@ def run_cross_val(label, features):
 
         elif (len(pos_class) > len(neg_class)) and len(pos_class) > 0:
             ratio = int(math.ceil(float(len(pos_class)) / float(len(neg_class))))
-            # print "Original class ratio is %s: 1, positive_class: negative_class" % ratio
             neg_class = neg_class * ratio
-            # print "The negative class now contains %s instances" % len(neg_class)
-            
-        else: pass
 
+        else: pass
+        # Recombine the balanced labels to form the total training set for
+        # this level of cross validation
         X = pos_class + neg_class
                 
         train_labels = [i['LABEL'] for i in X]
@@ -146,7 +134,8 @@ def run_cross_val(label, features):
         vec_train = vec.fit_transform(X_nolab).toarray()
         vec_test = vec.fit_transform(y_nolab).toarray()
         
-        # Min-max normalization
+        # Min-max normalization applying scaler learned from training set
+        # to test set
         scaler = preprocessing.MinMaxScaler()
         scaled_train_data = scaler.fit_transform(vec_train)
         scaled_test_data = scaler.transform(vec_test)
@@ -156,12 +145,10 @@ def run_cross_val(label, features):
         clf = LogisticRegression(penalty='l2')
         # Set parameters for grid search algorithm to tune C paramter
         param_grid = {'C': [2**-5, 2**-4, 2**-3, 2**-2, 2**-1, 1]}
-        # Initialize grid search algorithm and return model with tuned parameters
+        # Initialize grid search algorithm and return model with tuned parameters for AP
         grid_search = GridSearchCV(clf, param_grid=param_grid, scoring="average_precision", cv=5)
         # Fit the model with grid-search-tuned parameters
         grid_search.fit(scaled_train_data, vec_train_labels)
-        ''' Code below may be necessary for PR-curve plots with matplotlib'''
-        '''y_score = clf.fit(scaled_train_data, vec_train_labels).decision_function(scaled_test_data)'''
         # Predicted labels in test set
         predicted = grid_search.predict(scaled_test_data)
         

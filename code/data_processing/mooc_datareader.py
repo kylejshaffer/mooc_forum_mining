@@ -1,3 +1,9 @@
+'''
+This is an early script used for reading the initially distributed
+dataset (an Excel file), processing and keeping only the data needed
+for this present analysis, and formatting as JSON.
+'''
+
 import xlrd
 from xlrd import open_workbook, cellname
 

@@ -1,3 +1,8 @@
+'''
+Early experimental script using seaborn statistical
+plotting module to view features against one another
+'''
+
 import os
 import seaborn as sns
 import matplotlib as plt

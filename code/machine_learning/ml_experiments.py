@@ -145,10 +145,7 @@ def run_cross_val(label, alg, folds):
         grid_search = GridSearchCV(clf, param_grid)
         print "Training model..."
         grid_search.fit(scaled_train_data, vec_train_labels)
-        # clf.fit(scaled_train_data, vec_train_labels)
-        '''y_score = clf.fit(scaled_train_data, vec_train_labels).decision_function(scaled_test_data)'''
         print "Testing model..."
-        # predicted = clf.predict(scaled_test_data)
         predicted = grid_search.predict(scaled_test_data)
         
         # Print out metrics for evaluation

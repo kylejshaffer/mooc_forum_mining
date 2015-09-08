@@ -33,7 +33,7 @@ Since many of these can be quite tricky to install (or get talking to one anothe
 <b>Data Processing</b>
 <ul>
 <li><code>ablation_data_prep.py</code>: script for combining previoiusly computed features, cleaning up the constructed dataset, and constructing train-test pairs for running machine learning ablation analysis.</li>
-<li>code>feature_extractor.py</code>: code for processing raw data and extracting relevant features from data. Many of these were used in the <b>raw features</b> section in the paper in addition to <b>LIWC</b> linguistic count features.</li>
+<li><code>feature_extractor.py</code>: code for processing raw data and extracting relevant features from data. Many of these were used in the <b>raw features</b> section in the paper in addition to <b>LIWC</b> linguistic count features.</li>
 <li><code>liwc_text.py</code>: code for extracting only text, removing markup and punctuation for use with LIWC software.</li>
 <li><code>mooc_datareader.py</code>: early script for reading in Excel version of dataset and converting it to JSON.</li>
 </ul>
